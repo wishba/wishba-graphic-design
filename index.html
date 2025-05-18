@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wishba graphic design</title>
-  <style>
-    .title {
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark light">
+<title>wishba graphic design</title>
+<style>
+  .title {
+    text-align: center;
+  }
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      max-width: 50rem;
-      margin: auto;
-    }
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 50rem;
+    margin: auto;
+  }
 
-    .image-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+  .image-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
+  .image-list img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 1rem;
+  }
+
+  @media (prefers-color-scheme:dark) {
     .image-list img {
-      width: 100%;
-      border: 1px solid black;
-      border-radius: 1rem;
+      border: 1px solid white;
     }
-  </style>
+  }
+</style>
 </head>
 
 <body>
