@@ -25,32 +25,47 @@
 </head>
 
 <body>
-  <h1>Wisnu Bayu's Design Project</h1>
+  <header>
+    <nav>
+      <a href="https://wishba.github.io/"><b>Home</b></a>|
+      <a href="https://wishba.github.io/frontendmentor-project/">Frontend Project</a>|
+      <a href="https://wishba.github.io/wishba-certifications/">Certification</a>|
+      <a href="https://wishba.hashnode.dev/" target="_blank" rel="noopener noreferrer">Blog</a>
+    </nav>
+  </header>
 
-  <section class="image-grid">
-    <div class="image-list">
-      <img src="assets/lapangan nolnam.png" alt="lapangan nolnam">
-      <img src="assets/lomba qosidah.png" alt="lomba qosidah">
-      <img src="assets/papan nama daarul.png" alt="papan nama daarul">
-      <img src="assets/perhatian cctv.png" alt="perhatian cctv">
-      <img src="assets/ppdb daarul 2025-2026.png" alt="ppdb daarul 2025-2026">
+  <main>
+    <h1>Wisnu Bayu's Design Project</h1>
+
+    <section class="image-grid">
+      <div class="image-list">
+        <img src="assets/lapangan nolnam.png" alt="lapangan nolnam">
+        <img src="assets/lomba qosidah.png" alt="lomba qosidah">
+        <img src="assets/papan nama daarul.png" alt="papan nama daarul">
+        <img src="assets/perhatian cctv.png" alt="perhatian cctv">
+        <img src="assets/ppdb daarul 2025-2026.png" alt="ppdb daarul 2025-2026">
+      </div>
+
+      <div class="image-list">
+        <img src="assets/tabligh akbar 5 desember 2024 landscape.png" alt="tabligh akbar 5 desember 2024 landscape">
+        <img src="assets/tabligh akbar 5 desember 2024.png" alt="tabligh akbar 5 desember 2024">
+        <img src="assets/wisput logo.png" alt="wisput logo">
+        <img src="assets/penutupan tahun ajaran 2024 - 2025.png" alt="daarul penutupan tahun ajaran baru">
+      </div>
+    </section>
+
+    <div id="imgModal"
+      style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+      <span id="closeModal"
+        style="position:absolute; top:2rem; right:2rem; color:white; font-size:2rem; cursor:pointer;">&times;</span>
+      <img id="modalImg" src="" alt=""
+        style="max-width:90vw; max-height:90vh; border-radius:1rem; box-shadow:0 0 2rem #000;">
     </div>
+  </main>
 
-    <div class="image-list">
-      <img src="assets/tabligh akbar 5 desember 2024 landscape.png" alt="tabligh akbar 5 desember 2024 landscape">
-      <img src="assets/tabligh akbar 5 desember 2024.png" alt="tabligh akbar 5 desember 2024">
-      <img src="assets/wisput logo.png" alt="wisput logo">
-      <img src="assets/penutupan tahun ajaran 2024 - 2025.png" alt="daarul penutupan tahun ajaran baru">
-    </div>
-  </section>
-
-  <div id="imgModal"
-    style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-    <span id="closeModal"
-      style="position:absolute; top:2rem; right:2rem; color:white; font-size:2rem; cursor:pointer;">&times;</span>
-    <img id="modalImg" src="" alt=""
-      style="max-width:90vw; max-height:90vh; border-radius:1rem; box-shadow:0 0 2rem #000;">
-  </div>
+  <footer>
+    <p> &copy; <span id="copy-year"></span> Wisnu Bayu </p>
+  </footer>
 
   <script>
     document.querySelectorAll('.image-list img').forEach(img => {
@@ -67,6 +82,8 @@
     document.getElementById('imgModal').onclick = function (e) {
       if (e.target === this) this.style.display = 'none';
     };
+
+    document.getElementById('copy-year').textContent = new Date().getFullYear()
   </script>
 </body>
 
