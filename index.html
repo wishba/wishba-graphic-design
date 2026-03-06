@@ -6,22 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wisnu Bayu</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 50rem;
-    }
-
-    .image-list {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .image-list img {
-      width: 100%;
-    }
-  </style>
 </head>
 
 <body>
@@ -53,15 +37,15 @@
         <img src="assets/penutupan tahun ajaran 2024 - 2025.png" alt="daarul penutupan tahun ajaran baru">
       </div>
     </section>
-
-    <div id="imgModal"
-      style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-      <span id="closeModal"
-        style="position:absolute; top:2rem; right:2rem; color:white; font-size:2rem; cursor:pointer;">&times;</span>
-      <img id="modalImg" src="" alt=""
-        style="max-width:90vw; max-height:90vh; border-radius:1rem; box-shadow:0 0 2rem #000;">
-    </div>
   </main>
+
+  <div id="imgModal"
+    style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+    <span id="closeModal"
+      style="position:absolute; top:2rem; right:2rem; color:white; font-size:2rem; cursor:pointer;">&times;</span>
+    <img id="modalImg" src="" alt=""
+      style="max-width:90vw; max-height:90vh; border-radius:1rem; box-shadow:0 0 2rem #000;">
+  </div>
 
   <footer>
     <p> &copy; <span id="copy-year"></span> Wisnu Bayu </p>
