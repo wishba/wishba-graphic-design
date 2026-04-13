@@ -6,63 +6,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wisnu Bayu - Design Project</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="https://wishba.github.io/">Home</a>|
-      <a href="https://wishba.hashnode.dev/" target="_blank" rel="noopener noreferrer">Blog</a>|
-      <a href="https://www.canva.com/design/DAHDJxYaXkM/cqPNO6tADgUISSa-UfsX5w/edit?utm_content=DAHDJxYaXkM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-        target="_blank" rel="noopener noreferrer">Resume</a>
-    </nav>
-  </header>
+  <div id="tsparticles"></div>
 
-  <main>
-    <h1>Wisnu Bayu's Design Project</h1>
+  <div data-aos="fade-up">
+    <header>
+      <nav>
+        <a href="https://wishba.github.io/">Home</a>|
+        <a href="https://wishba.hashnode.dev/" target="_blank" rel="noopener noreferrer">Blog</a>|
+        <a href="https://www.canva.com/design/DAHDJxYaXkM/cqPNO6tADgUISSa-UfsX5w/edit?utm_content=DAHDJxYaXkM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+          target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </header>
 
-    <section class="image-grid">
-      <div class="image-list">
-        <div>
-          <img src="assets/lapangan nolnam.png" alt="lapangan nolnam">
-          <img src="assets/clipper dagu.png" alt="clipper dagu">
-          <img src="assets/papan nama daarul.png" alt="papan nama daarul">
+    <main>
+      <h1>Wisnu Bayu's Design Project</h1>
+
+      <section class="image-grid">
+        <div class="image-list">
+          <div>
+            <img src="assets/lapangan nolnam.png" alt="lapangan nolnam">
+            <img src="assets/clipper dagu.png" alt="clipper dagu">
+            <img src="assets/papan nama daarul.png" alt="papan nama daarul">
+          </div>
+
+          <div>
+            <img src="assets/back to school daarul 2026 alt.png" alt="back to school daarul 2026 alt">
+            <img src="assets/tabligh akbar 5 desember 2024 landscape.png" alt="tabligh akbar 5 desember 2024 landscape">
+            <img src="assets/penutupan tahun ajaran 2024 - 2025.png" alt="daarul penutupan tahun ajaran baru">
+          </div>
         </div>
 
-        <div>
-          <img src="assets/back to school daarul 2026 alt.png" alt="back to school daarul 2026 alt">
-          <img src="assets/tabligh akbar 5 desember 2024 landscape.png" alt="tabligh akbar 5 desember 2024 landscape">
-          <img src="assets/penutupan tahun ajaran 2024 - 2025.png" alt="daarul penutupan tahun ajaran baru">
-        </div>
-      </div>
+        <div class="image-list">
+          <div>
+            <img src="assets/back to school daarul 2026.png" alt="back to school daarul 2026">
+            <img src="assets/wisput logo.png" alt="wisput logo">
+            <img src="assets/lomba qosidah.png" alt="lomba qosidah">
+          </div>
 
-      <div class="image-list">
-        <div>
-          <img src="assets/back to school daarul 2026.png" alt="back to school daarul 2026">
-          <img src="assets/wisput logo.png" alt="wisput logo">
-          <img src="assets/lomba qosidah.png" alt="lomba qosidah">
+          <div>
+            <img src="assets/tabligh akbar 5 desember 2024.png" alt="tabligh akbar 5 desember 2024">
+            <img src="assets/perhatian cctv.png" alt="perhatian cctv">
+            <img src="assets/ppdb daarul 2025-2026.png" alt="ppdb daarul 2025-2026">
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div>
-          <img src="assets/tabligh akbar 5 desember 2024.png" alt="tabligh akbar 5 desember 2024">
-          <img src="assets/perhatian cctv.png" alt="perhatian cctv">
-          <img src="assets/ppdb daarul 2025-2026.png" alt="ppdb daarul 2025-2026">
-        </div>
-      </div>
-    </section>
-  </main>
+    <div id="imgModal"
+      style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+      <span id="closeModal"
+        style="position:absolute; top:2rem; right:2rem; color:white; font-size:2rem; cursor:pointer;">&times;</span>
+      <img id="modalImg" src="" alt=""
+        style="max-width:90vw; max-height:90vh; border-radius:1rem; box-shadow:0 0 2rem #000;">
+    </div>
 
-  <div id="imgModal"
-    style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-    <span id="closeModal"
-      style="position:absolute; top:2rem; right:2rem; color:white; font-size:2rem; cursor:pointer;">&times;</span>
-    <img id="modalImg" src="" alt=""
-      style="max-width:90vw; max-height:90vh; border-radius:1rem; box-shadow:0 0 2rem #000;">
+    <footer>
+      <p> &copy; <span id="copy-year"></span> Wisnu Bayu </p>
+    </footer>
   </div>
-
-  <footer>
-    <p> &copy; <span id="copy-year"></span> Wisnu Bayu </p>
-  </footer>
 
   <script>
     document.querySelectorAll('.image-list img').forEach(img => {
@@ -79,8 +84,37 @@
     document.getElementById('imgModal').onclick = function (e) {
       if (e.target === this) this.style.display = 'none';
     };
+  </script>
+  <script>document.getElementById('copy-year').textContent = new Date().getFullYear()</script>
 
-    document.getElementById('copy-year').textContent = new Date().getFullYear()
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init()</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2/tsparticles.engine.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2/tsparticles.preset.links.bundle.min.js"></script>
+  <script>
+      (async () => {
+        await loadLinksPreset(tsParticles);
+
+        await tsParticles.load("tsparticles", {
+          preset: "links",
+          background: {
+            color: "#ffffff",
+          },
+          particles: {
+            color: {
+              value: "#000000",
+            },
+            links: {
+              color: "#000000",
+            },
+          },
+          fullScreen: {
+            enable: true,
+            zIndex: -1
+          },
+        });
+      })();
   </script>
 </body>
 
